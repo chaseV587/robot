@@ -1,0 +1,27 @@
+<!--index.wxml-->
+<view class="container">
+    <view class="userinfo-top">
+        <view class="userinfo-Tleft">
+            <image class="userinfo-avata" src="{{userInfo.imgUrl}}" background-size="cover"></image>
+        </view>
+        <view class="userinfo-Tright">
+            <text class="userinfo-tel">{{userInfo.tel}}</text>
+            <text class="userinfo-name">{{userInfo.name}}</text>
+        </view>
+    </view>
+    <view class="menu-list">
+        <view wx:for="{{menuList}}" wx:key="item.text" class="menu-item">
+            <navigator url="" >
+                <view class="menu-item-wrap">
+                    <image class="menu-item-icon" src="{{item.icon}}" background-size="cover"></image>
+                    <text class="menu-item-text">{{item.text}}</text>
+                </view>
+            </navigator>
+        </view>
+    </view>
+    <view class="switch-account">
+        <image class="switchBtn" src="{{switchBtn}}" background-size="cover"></image>
+    </view>
+
+    
+</view>
