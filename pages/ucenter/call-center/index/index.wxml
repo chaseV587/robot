@@ -1,56 +1,48 @@
 <!--index.wxml-->
 <view class="container">
-    <view class="wallet-top">
-        <view class="wallet-top-wrap">
-            <text class="wallet-top-text">总余额（元）</text>
-            <text class="wallet-top-num">{{wallet.balance}}</text>
+    <view class="menu-wrap">
+        <view class="menu-wrap-header">
+            <image class="menu-item-icon" src="{{iconList.icon2}}" background-size="cover"></image>
+            <text class="menu-item-text">故障上报</text>
+            <image class="menu-item-right" src="{{iconList.icon1}}" background-size="cover"></image>
         </view>
     </view>
-    <view class="menu-list">
-        <view class="menu-item">
-            <view class="menu-item-wrap">
-                <image class="menu-item-icon" src="{{menuList[0].icon}}" background-size="cover"></image>
-                <text class="menu-item-title">{{menuList[0].title}}</text>
-                <text class="menu-item-amount">{{menuList[0].amount}}</text>
-                <text class="menu-item-linkText" bindtap="powerDrawer" data-statu="open">{{menuList[0].linkText}}</text>
+    <view class="menu-wrap">
+        <view class="menu-wrap-header">
+            <image class="menu-item-icon" src="{{iconList.icon5}}" background-size="cover"></image>
+            <text class="menu-item-text">常见问题</text>
+        </view>
+        <view>
+            <view class="menu-wrap-list">
+                <text class="menu-item-text">押金与余额的区别</text>
+                <image class="menu-item-right" src="{{iconList.icon1}}" background-size="cover"></image>
             </view>
-            <view class="menu-item-wrap">
-                <image class="menu-item-icon" src="{{menuList[1].icon}}" background-size="cover"></image>
-                <text class="menu-item-title">{{menuList[1].title}}</text>
-                <text class="menu-item-amount">{{menuList[1].amount}}</text>
-                <text class="menu-item-linkText">{{menuList[1].linkText}}</text>
+            <view class="menu-wrap-list">
+                <text class="menu-item-text">如何解锁使用</text>
+                <image class="menu-item-right" src="{{iconList.icon1}}" background-size="cover"></image>
+            </view>
+            <view class="menu-wrap-list">
+                <text class="menu-item-text">使用范围及停放规则</text>
+                <image class="menu-item-right" src="{{iconList.icon1}}" background-size="cover"></image>
+            </view>
+            <view class="menu-wrap-list">
+                <text class="menu-item-text">计费规则</text>
+                <image class="menu-item-right" src="{{iconList.icon1}}" background-size="cover"></image>
             </view>
         </view>
     </view>
-
-    <!--余额充值弹窗-->
-    <view class="drawer-wrap" wx:if="{{showModalStatus}}">
-        <!--mask-->
-        <view class="drawer-screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view>
-        <!--使用animation属性指定需要执行的动画-->
-        <view animation="{{animationData}}" class="drawer-box" wx:if="{{showModalStatus}}">
-            <!--drawer content-->
-            <view class="drawer-title">
-                <text class="drawer-title-text">充值金额</text>
-            </view>
-            <view class="drawer-amount">
-                {{credit}}
-            </view>
-            <view class="drawer-choose-list">
-                <view  wx:for="{{creditList}}" wx:key="item">
-                    <text class="choose-list-item {{credit==item?'choose-list-item-a':''}}" bindtap="chooseItem" data-status="{{item}}">￥{{item}}</text>
-                </view>
-            </view>
-            <view class="drawer-btn">
-                <image class="switchBtn" src="{{switchBtn}}" background-size="cover" bindtap="powerDrawer" data-statu="close" ></image>
-            </view>
-            <view class="drawer-tip">
-                <text class="drawer-tip-text">点击“充值”，即表示已阅读并同意<text class="drawer-tip-text-main">《充值协议》</text></text>
-            </view>
+    <view class="menu-wrap">
+        <view class="menu-wrap-header">
+            <image class="menu-item-icon" src="{{iconList.icon3}}" background-size="cover"></image>
+            <text class="menu-item-text">意见反馈</text>
+            <image class="menu-item-right" src="{{iconList.icon1}}" background-size="cover"></image>
         </view>
-
-        <view wx:if="{{showModalStatus}}">
-            <image class="drawer-close" src="{{closeIcon}}" bindtap="powerDrawer" data-statu="close"  background-size="cover"></image>
+    </view>
+    <view class="menu-wrap">
+        <view class="menu-wrap-header">
+            <image class="menu-item-icon" src="{{iconList.icon4}}" background-size="cover"></image>
+            <text class="menu-item-text">人工客服</text>
+            <image class="menu-item-right" src="{{iconList.icon1}}" background-size="cover"></image>
         </view>
     </view>
 

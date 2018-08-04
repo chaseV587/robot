@@ -5,9 +5,12 @@
 
 Page({
     data: {
-        wallet: {
-            balance: '1530.00',
-            cashPledge: '300.00',
+        iconList: {
+            icon1: '../../../../static/images/ucenter/icon-8.png',
+            icon2: '../../../../static/images/ucenter/icon-9.png',
+            icon3: '../../../../static/images/ucenter/icon-12.png',
+            icon4: '../../../../static/images/ucenter/icon-10.png',
+            icon5: '../../../../static/images/ucenter/icon-11.png'
         },
         menuList: [
             {

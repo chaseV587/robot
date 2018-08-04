@@ -1,187 +1,44 @@
 /**index.wxss**/
 .container {
-    width: 100%;
+    width: 650rpx;
+    margin: 20rpx 50rpx;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 }
 
-.wallet-top {
-    width:100%;
-    height:400rpx;
+.menu-wrap {
+    width: 100%;
     background: #ffffff;
+    flex-direction: column;
+    display: flex;
+}
+.menu-wrap-header{
     flex-direction: row;
     display: flex;
-}
-.wallet-top-wrap{
-    display: flex;
-    display: flex;
-    flex-direction: column;
-    flex:6
-}
-.wallet-top-text{
-    margin-top: 60rpx;
-    font-size: 24rpx;
-    margin-left: 40px;
-}
-.wallet-top-num{
-    margin-top: 10rpx;
-    font-size: 100rpx;
-    color:#fbd52a;
-    margin-left: 40px;
-}
-
-.menu-list{
-    width: 100%;
-    margin-top: 20rpx;
-    flex-direction: column;
-}
-.menu-item{
-    width: 100%;
-    flex-direction: column;
-}
-.menu-item-wrap{
-    width: 620rpx;
-    height: 130rpx;
-    margin: 0 auto;
-    flex-direction: row;
-    border-bottom: 1rpx solid #eeeeee;
 }
 .menu-item-icon{
     width: 40rpx;
     height: 40rpx;
-    margin-top: 48rpx;
-    margin-right: 50rpx;
+    margin: 30rpx 50rpx 0 20rpx;
     font-size: 35rpx;
     float: left;
 }
-.menu-item-title{
-    width: 180rpx;
-    line-height: 130rpx;
+.menu-item-right{
+    width: 40rpx;
+    height: 40rpx;
+    margin: 30rpx 0rpx 0 50rpx;
     font-size: 35rpx;
-    display: block;
-    float: left;
+    float: right;
 }
-
-.menu-item-amount{
-    width: 200rpx;
-    line-height: 130rpx;
-    font-size: 35rpx;
-    color: #ffd000;
-    display: block;
-    float: left;
-}
-
-.menu-item-linkText{
-    text-align: center;
-    width: 150rpx;
-    height: 50rpx;
-    margin-top: 20px;
-    line-height: 50rpx;
-    font-size: 35rpx;
-    display: block;
-    float: left;
-    border:1rpx solid #333333;
-    border-radius: 20rpx;
-}
-
-.drawer-wrap{
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    flex-direction: column;
-}
-/*mask*/
-.drawer-screen {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    background: #000;
-    opacity: 0.5;
-    overflow: hidden;
-}
-
-/*content*/
-.drawer-box {
-    width: 600rpx;
-    height: 650rpx;
-    overflow: hidden;
-    position: fixed;
-    top: 50%;
-    left: 0;
-    z-index: 1001;
-    background: #FFFFFF;
-    margin: -325rpx 75rpx 0 75rpx;
-    border-radius: 20rpx;
-    flex-direction: column;
-}
-.drawer-title{
-    width: 100%;
-    height: 120rpx;
-    line-height: 120rpx;
-    text-align: center;
-}
-.drawer-title-text{
-
-    font: 36rpx "microsoft yahei";
-}
-.drawer-amount{
-     height: 210rpx;
-    font-size: 100rpx;
-    text-align: center;
-    color: #fbd52a;
-}
-.drawer-choose-list{
+.menu-item-text{
+    width: 480rpx;
     height: 100rpx;
-    flex-direction: row;
-    display: flex;
-    margin: 0 22rpx;
+    line-height: 100rpx;
+    font-size: 36rpx;
 }
-.choose-list-item{
-    height: 50rpx;
-    line-height: 50rpx;
-    font-size: 28rpx;
-    width: 110rpx;
-    margin: 0 14rpx;
-    text-align: center;
-    border:1rpx solid #333333;
-    display:inline-block;
-    border-radius: 20rpx;
-}
-
-.choose-list-item-a{
-    border:1rpx solid #fbd52a;
-    background: #fbd52a;
-}
-
-.switchBtn{
-    margin: 20rpx 50rpx;
-    width: 500rpx;
-    height: 80rpx;
-}
-
-.drawer-tip{
-    flex-direction: row;
-    text-align: center;
-}
-
-.drawer-tip-text{
-    font-size: 22rpx;
-    text-align: center;
-}
-.drawer-tip-text-main{
-    color: #fbd52a;
-}
-
-.drawer-close{
-    width: 54rpx;
-    height: 54rpx;
-    position: fixed;
-    top: 50%;
-    left: 0;
-    z-index: 1001;
-    margin: 200px 0 0 350rpx;
+.menu-wrap-list{
+    width: 530rpx;
+    margin-left: 110rpx;
+    border-bottom:1rpx solid #eeeeee;
 }
