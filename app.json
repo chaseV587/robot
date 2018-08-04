@@ -1,5 +1,6 @@
 {
     "pages":[
+        "pages/wallet/index",
         "pages/ucenter/index"
     ],
     "window":{

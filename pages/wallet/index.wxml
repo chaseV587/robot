@@ -1,0 +1,28 @@
+<!--index.wxml-->
+<view class="container">
+    <view class="wallet-top">
+        <view class="wallet-top-wrap">
+            <text class="wallet-top-text">总余额（元）</text>
+            <text class="wallet-top-num">{{wallet.balance}}</text>
+        </view>
+    </view>
+    <view class="menu-list">
+        <view wx:for="{{menuList}}" wx:key="item.title" class="menu-item">
+            <navigator url="" >
+                <view class="menu-item-wrap">
+                    <image class="menu-item-icon" src="{{item.icon}}" background-size="cover"></image>
+                    <text class="menu-item-title">{{item.title}}</text>
+                    <text class="menu-item-amount">{{item.amount}}</text>
+                    <text class="menu-item-linkText">{{item.linkText}}</text>
+                </view>
+            </navigator>
+        </view>
+    </view>
+
+    <!--余额充值弹窗-->
+    <!--<cover-view class="controls">-->
+
+    <!--</cover-view>-->
+
+    
+</view>
