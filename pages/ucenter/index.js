@@ -26,7 +26,8 @@ Page({
                 icon: '../../static/images/ucenter/icon-3.png',
                 text: '客服中心'
             }
-        ]
+        ],
+        switchBtn: '../../static/images/ucenter/icon-4.png',
     },
 
 
