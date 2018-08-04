@@ -1,7 +1,8 @@
 {
     "pages":[
-        "pages/wallet/index",
-        "pages/ucenter/index"
+        "pages/ucenter/call-center/index/index",
+        "pages/ucenter/wallet/index",
+        "pages/ucenter/index/index"
     ],
     "window":{
         "backgroundColor":"#ffffff",

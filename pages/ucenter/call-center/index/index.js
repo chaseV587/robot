@@ -12,22 +12,22 @@ Page({
         menuList: [
             {
                 linkUrl: '',
-                icon: '../../static/images/ucenter/icon-1.png',
+                icon: '../../../../static/images/ucenter/icon-1.png',
                 title: '我的余额',
                 amount: '1530.00',
                 linkText: '充    值'
             },
             {
                 linkUrl: '',
-                icon: '../../static/images/ucenter/icon-5.png',
+                icon: '../../../../static/images/ucenter/icon-5.png',
                 title: '我的押金',
                 amount: '300.00',
                 linkText: '交押金'
             },
         ],
         showModalStatus: false,
-        switchBtn: '../../static/images/ucenter/icon-6.png',
-        closeIcon: '../../static/images/ucenter/icon-7.png',
+        switchBtn: '../../../../static/images/ucenter/icon-6.png',
+        closeIcon: '../../../../static/images/ucenter/icon-7.png',
         creditList: [1,5,10,20],
         credit: 1, // 充值金额
     },
