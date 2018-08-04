@@ -138,18 +138,23 @@
     height: 100rpx;
     flex-direction: row;
     display: flex;
-    margin: 0 20rpx;
+    margin: 0 22rpx;
 }
 .choose-list-item{
     height: 50rpx;
     line-height: 50rpx;
     font-size: 28rpx;
     width: 110rpx;
-    margin: 0 20rpx;
+    margin: 0 14rpx;
     text-align: center;
     border:1rpx solid #333333;
     display:inline-block;
     border-radius: 20rpx;
+}
+
+.choose-list-item-a{
+    border:1rpx solid #fbd52a;
+    background: #fbd52a;
 }
 
 .switchBtn{
