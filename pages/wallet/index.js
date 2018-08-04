@@ -25,6 +25,9 @@ Page({
                 linkText: '交押金'
             },
         ],
+        showModalStatus: true,
+        switchBtn: '../../static/images/ucenter/icon-6.png',
+        closeIcon: '../../static/images/ucenter/icon-7.png',
     },
 
 

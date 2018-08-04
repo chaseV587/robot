@@ -20,9 +20,36 @@
     </view>
 
     <!--余额充值弹窗-->
-    <!--<cover-view class="controls">-->
+    <view class="drawer-wrap">
+        <!--mask-->
+        <view class="drawer-screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view>
+        <!--使用animation属性指定需要执行的动画-->
+        <view animation="{{animationData}}" class="drawer-box" wx:if="{{showModalStatus}}">
+            <!--drawer content-->
+            <view class="drawer-title">
+                <text class="drawer-title-text">充值金额</text>
+            </view>
+            <view class="drawer-amount">
+                20
+            </view>
+            <view class="drawer-choose-list">
+                <text class="choose-list-item">￥1</text>
+                <text class="choose-list-item">￥5</text>
+                <text class="choose-list-item">￥10</text>
+                <text class="choose-list-item">￥20</text>
+            </view>
+            <view class="drawer-btn">
+                <image class="switchBtn" src="{{switchBtn}}" background-size="cover"></image>
+            </view>
+            <view class="drawer-tip">
+                <text class="drawer-tip-text">点击“充值”，即表示已阅读并同意<text class="drawer-tip-text-main">《充值协议》</text></text>
+            </view>
+        </view>
 
-    <!--</cover-view>-->
+        <view>
+            <image class="drawer-close" src="{{closeIcon}}" background-size="cover"></image>
+        </view>
+    </view>
 
-    
+
 </view>
