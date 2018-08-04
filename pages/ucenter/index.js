@@ -1,7 +1,7 @@
-//index.js
-var qcloud = require('../../vendor/wafer2-client-sdk/index')
-var config = require('../../config')
-var util = require('../../utils/util.js')
+// //index.js
+// var qcloud = require('../../vendor/wafer2-client-sdk/index')
+// var config = require('../../config')
+// var util = require('../../utils/util.js')
 
 Page({
     data: {
@@ -26,11 +26,7 @@ Page({
                 icon: '../../static/images/ucenter/icon-3.png',
                 text: '客服中心'
             }
-        ],
-        switchBtn: '../../static/images/ucenter/icon-4.png',
-        logged: false,
-        takeSession: false,
-        requestResult: ''
+        ]
     },
 
 
