@@ -24,25 +24,42 @@ Page({
                 amount: '300.00',
                 linkText: '交押金'
             },
+            {
+                linkUrl: '',
+                icon: '../../../../static/images/ucenter/icon-5.png',
+                title: '我的押金',
+                amount: '300.00',
+                linkText: '退押金'
+            },
         ],
         showRechargeStatus: false, // 缴费弹窗状态
-        showDepositStatus: true, // 充值弹窗状态
+        showDepositStatus: false, // 交押金弹窗状态
+        showRefundStatus: false, // 退押金弹窗
         switchBtn: '../../../../static/images/ucenter/icon-6.png',
         switchBtn2: '../../../../static/images/ucenter/icon-17.png',
+        switchBtn3: '../../../../static/images/ucenter/icon-18.png',
         closeIcon: '../../../../static/images/ucenter/icon-7.png',
+        refunIncon1: '../../../../static/images/ucenter/icon-19.png',
+        refunIncon2: '../../../../static/images/ucenter/icon-20.png',
         creditList: [1,5,10,20],
         credit: 1, // 充值金额
-        deposit_amount: 99, // 押金金额
+        deposit_amount: 99, // 押金金额\
+        reason_status: '' // 退押金原因
     },
     // 充值弹窗
     recharge: function (e) {
         var currentStatu = e.currentTarget.dataset.recharge_status;
         this.util(currentStatu, 'recharge')
     },
-    // 押金弹窗
+    // 缴纳押金弹窗
     deposit: function (e) {
-        var currentStatu = e.currentTarget.dataset.deposit_statu;
+        var currentStatu = e.currentTarget.dataset.deposit_status;
         this.util(currentStatu, 'deposit')
+    },
+    // 退押金弹窗
+    refund: function (e) {
+        var currentStatu = e.currentTarget.dataset.refund_status;
+        this.util(currentStatu, 'refund')
     },
     util: function(currentStatu, type){
         /* 动画部分 */
@@ -81,6 +98,12 @@ Page({
                         showDepositStatus: false
                     }
                 );
+            } else if (currentStatu == "close" && type == 'refund') {
+                this.setData(
+                    {
+                        showRefundStatus: false
+                    }
+                );
             }
         }.bind(this), 200);
         // 显示
@@ -96,6 +119,12 @@ Page({
                     showDepositStatus: true
                 }
             );
+        } else if (currentStatu == "open" && type == 'refund') {
+            this.setData(
+                {
+                    showRefundStatus: true
+                }
+            );
         }
     },
     // 选择充值金额
@@ -105,6 +134,14 @@ Page({
         this.setData({
             credit: currentStatu
         });
+    },
+    // 选择退货原因
+    chosseReason(e) {
+        var currentStatu = e.currentTarget.dataset.reason_status;
+        this.setData({
+            reason_status: currentStatu
+        });
+
     }
 
 });

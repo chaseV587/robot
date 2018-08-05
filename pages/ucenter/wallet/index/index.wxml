@@ -18,7 +18,13 @@
                 <image class="menu-item-icon" src="{{menuList[1].icon}}" background-size="cover"></image>
                 <text class="menu-item-title">{{menuList[1].title}}</text>
                 <text class="menu-item-amount">{{menuList[1].amount}}</text>
-                <text class="menu-item-linkText"  bindtap="deposit" data-deposit_statu="open">{{menuList[1].linkText}}</text>
+                <text class="menu-item-linkText"  bindtap="deposit" data-deposit_status="open">{{menuList[1].linkText}}</text>
+            </view>
+            <view class="menu-item-wrap">
+                <image class="menu-item-icon" src="{{menuList[1].icon}}" background-size="cover"></image>
+                <text class="menu-item-title">{{menuList[2].title}}</text>
+                <text class="menu-item-amount">{{menuList[2].amount}}</text>
+                <text class="menu-item-linkText"  bindtap="refund" data-refund_status="open">{{menuList[2].linkText}}</text>
             </view>
         </view>
     </view>
@@ -56,7 +62,7 @@
     <!--缴纳押金弹窗-->
     <view class="drawer-wrap" wx:if="{{showDepositStatus}}">
         <!--mask-->
-        <view class="drawer-screen" bindtap="deposit" data-deposit_statu="close" wx:if="{{showDepositStatus}}"></view>
+        <view class="drawer-screen" bindtap="deposit" data-deposit_status="close" wx:if="{{showDepositStatus}}"></view>
         <!--使用animation属性指定需要执行的动画-->
         <view animation="{{animationData}}" class="drawer-box" wx:if="{{showDepositStatus}}">
             <!--drawer content-->
@@ -73,12 +79,54 @@
                 支付使用订单后，押金随时可退
             </view>
             <view class="drawer-btn">
-                <image class="switchBtn" src="{{switchBtn2}}" background-size="cover" bindtap="deposit" data-deposit_statu="close" ></image>
+                <image class="switchBtn" src="{{switchBtn2}}" background-size="cover" bindtap="deposit" data-deposit_status="close" ></image>
             </view>
         </view>
 
         <view wx:if="{{showDepositStatus}}">
-            <image class="drawer-close" src="{{closeIcon}}" bindtap="deposit" data-deposit_statu="close"  background-size="cover"></image>
+            <image class="drawer-close" src="{{closeIcon}}" bindtap="deposit" data-deposit_status="close"  background-size="cover"></image>
+        </view>
+    </view>
+
+    <!--退押金弹窗-->
+    <view class="drawer-wrap" wx:if="{{showRefundStatus}}">
+        <!--mask-->
+        <view class="drawer-screen" bindtap="refund" data-refund_status="close" wx:if="{{showRefundStatus}}"></view>
+        <!--使用animation属性指定需要执行的动画-->
+        <view animation="{{animationData}}" class="drawer-box-fund" wx:if="{{showRefundStatus}}">
+            <!--drawer content-->
+            <view class="drawer-title">
+                <text class="drawer-title-text">请选择退押金的原因</text>
+            </view>
+            <view class="reason-list">
+                <view class="reason-item" bindtap="chosseReason" data-reason_status="1">
+                    <text class="reason-text">跟随体验不好，经常跟丢/跟不上我</text>
+                    <image class="reason-icon" src="{{reason_status=='1'?refunIncon1: refunIncon2}}" background-size="cover"></image>
+                </view>
+                <view class="reason-item" bindtap="chosseReason" data-reason_status="2">
+                    <text class="reason-text">不实用，没有用下去的理由</text>
+                    <image class="reason-icon" src="{{reason_status=='2'?refunIncon1:refunIncon2}}" background-size="cover"></image>
+                </view>
+                <view class="reason-item" bindtap="chosseReason" data-reason_status="3">
+                    <text class="reason-text">外观不好看</text>
+                    <image class="reason-icon" src="{{reason_status=='3'?refunIncon1:refunIncon2}}" background-size="cover"></image>
+                </view>
+                <view class="reason-item" bindtap="chosseReason" data-reason_status="4">
+                    <text class="reason-text">其他</text>
+                    <image class="reason-icon" src="{{reason_status=='4'?refunIncon1:refunIncon2}}" background-size="cover"></image>
+                </view>
+                <view>
+                    <textarea placeholder="" class="other-reason" name="textarea"/>
+                </view>
+            </view>
+
+            <view class="drawer-btn">
+                <image class="switchBtn" src="{{switchBtn3}}" background-size="cover" bindtap="refund" data-refund_status="close" ></image>
+            </view>
+        </view>
+
+        <view wx:if="{{showRefundStatus}}">
+            <image class="drawer-close drawer-close-2" src="{{closeIcon}}" bindtap="refund" data-refund_status="close"  background-size="cover"></image>
         </view>
     </view>
 
