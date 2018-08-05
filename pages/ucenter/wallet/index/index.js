@@ -25,18 +25,26 @@ Page({
                 linkText: '交押金'
             },
         ],
-        showModalStatus: false,
+        showRechargeStatus: false, // 缴费弹窗状态
+        showDepositStatus: true, // 充值弹窗状态
         switchBtn: '../../../../static/images/ucenter/icon-6.png',
+        switchBtn2: '../../../../static/images/ucenter/icon-17.png',
         closeIcon: '../../../../static/images/ucenter/icon-7.png',
         creditList: [1,5,10,20],
         credit: 1, // 充值金额
+        deposit_amount: 99, // 押金金额
     },
     // 充值弹窗
-    powerDrawer: function (e) {
-        var currentStatu = e.currentTarget.dataset.statu;
-        this.util(currentStatu)
+    recharge: function (e) {
+        var currentStatu = e.currentTarget.dataset.recharge_status;
+        this.util(currentStatu, 'recharge')
     },
-    util: function(currentStatu){
+    // 押金弹窗
+    deposit: function (e) {
+        var currentStatu = e.currentTarget.dataset.deposit_statu;
+        this.util(currentStatu, 'deposit')
+    },
+    util: function(currentStatu, type){
         /* 动画部分 */
         // 第1步：创建动画实例
         var animation = wx.createAnimation({
@@ -61,19 +69,31 @@ Page({
                 animationData: animation
             });
             //关闭
-            if (currentStatu == "close") {
+            if (currentStatu == "close" && type == 'recharge') {
                 this.setData(
                     {
-                        showModalStatus: false
+                        showRechargeStatus: false
+                    }
+                );
+            } else if (currentStatu == "close" && type == 'deposit') {
+                this.setData(
+                    {
+                        showDepositStatus: false
                     }
                 );
             }
         }.bind(this), 200);
         // 显示
-        if (currentStatu == "open") {
+        if (currentStatu == "open" && type == 'recharge') {
             this.setData(
                 {
-                    showModalStatus: true
+                    showRechargeStatus: true
+                }
+            );
+        } else if (currentStatu == "open" && type == 'deposit') {
+            this.setData(
+                {
+                    showDepositStatus: true
                 }
             );
         }

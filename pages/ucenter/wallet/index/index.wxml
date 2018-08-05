@@ -12,23 +12,23 @@
                 <image class="menu-item-icon" src="{{menuList[0].icon}}" background-size="cover"></image>
                 <text class="menu-item-title">{{menuList[0].title}}</text>
                 <text class="menu-item-amount">{{menuList[0].amount}}</text>
-                <text class="menu-item-linkText" bindtap="powerDrawer" data-statu="open">{{menuList[0].linkText}}</text>
+                <text class="menu-item-linkText" bindtap="recharge" data-recharge_status="open">{{menuList[0].linkText}}</text>
             </view>
             <view class="menu-item-wrap">
                 <image class="menu-item-icon" src="{{menuList[1].icon}}" background-size="cover"></image>
                 <text class="menu-item-title">{{menuList[1].title}}</text>
                 <text class="menu-item-amount">{{menuList[1].amount}}</text>
-                <text class="menu-item-linkText">{{menuList[1].linkText}}</text>
+                <text class="menu-item-linkText"  bindtap="deposit" data-deposit_statu="open">{{menuList[1].linkText}}</text>
             </view>
         </view>
     </view>
 
     <!--余额充值弹窗-->
-    <view class="drawer-wrap" wx:if="{{showModalStatus}}">
+    <view class="drawer-wrap" wx:if="{{showRechargeStatus}}">
         <!--mask-->
-        <view class="drawer-screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view>
+        <view class="drawer-screen" bindtap="recharge" data-recharge_status="close" wx:if="{{showRechargeStatus}}"></view>
         <!--使用animation属性指定需要执行的动画-->
-        <view animation="{{animationData}}" class="drawer-box" wx:if="{{showModalStatus}}">
+        <view animation="{{animationData}}" class="drawer-box" wx:if="{{showRechargeStatus}}">
             <!--drawer content-->
             <view class="drawer-title">
                 <text class="drawer-title-text">充值金额</text>
@@ -42,15 +42,43 @@
                 </view>
             </view>
             <view class="drawer-btn">
-                <image class="switchBtn" src="{{switchBtn}}" background-size="cover" bindtap="powerDrawer" data-statu="close" ></image>
+                <image class="switchBtn" src="{{switchBtn}}" background-size="cover" bindtap="powerDrawer" data-recharge_status="close" ></image>
             </view>
             <view class="drawer-tip">
                 <text class="drawer-tip-text">点击“充值”，即表示已阅读并同意<text class="drawer-tip-text-main">《充值协议》</text></text>
             </view>
         </view>
 
-        <view wx:if="{{showModalStatus}}">
-            <image class="drawer-close" src="{{closeIcon}}" bindtap="powerDrawer" data-statu="close"  background-size="cover"></image>
+        <view wx:if="{{showRechargeStatus}}">
+            <image class="drawer-close" src="{{closeIcon}}" bindtap="recharge" data-recharge_status="close"  background-size="cover"></image>
+        </view>
+    </view>
+    <!--缴纳押金弹窗-->
+    <view class="drawer-wrap" wx:if="{{showDepositStatus}}">
+        <!--mask-->
+        <view class="drawer-screen" bindtap="deposit" data-deposit_statu="close" wx:if="{{showDepositStatus}}"></view>
+        <!--使用animation属性指定需要执行的动画-->
+        <view animation="{{animationData}}" class="drawer-box" wx:if="{{showDepositStatus}}">
+            <!--drawer content-->
+            <view class="drawer-title">
+                <text class="drawer-title-text">缴纳押金</text>
+            </view>
+            <view class="drawer-amount">
+                {{deposit_amount}}
+            </view>
+            <view class="drawer-tip1">
+                缴纳 <text class="yellow-color font-weight">{{deposit_amount}}</text> 元押金
+            </view>
+            <view class="drawer-tip2">
+                支付使用订单后，押金随时可退
+            </view>
+            <view class="drawer-btn">
+                <image class="switchBtn" src="{{switchBtn2}}" background-size="cover" bindtap="deposit" data-deposit_statu="close" ></image>
+            </view>
+        </view>
+
+        <view wx:if="{{showDepositStatus}}">
+            <image class="drawer-close" src="{{closeIcon}}" bindtap="deposit" data-deposit_statu="close"  background-size="cover"></image>
         </view>
     </view>
 

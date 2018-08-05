@@ -185,3 +185,28 @@
     z-index: 1001;
     margin: 200px 0 0 350rpx;
 }
+.drawer-tip1{
+    text-align: center;
+    font-size: 30rpx;
+    line-height: 60rpx;
+}
+.drawer-tip2{
+    text-align: center;
+    font-size: 24rpx;
+    line-height: 60rpx;
+    margin-bottom: 10rpx;
+}
+
+.done-color{
+    color: #999999;
+}
+.yellow-color{
+    color: #ffd100
+}
+.red-color{
+    color: #ff8181;
+}
+.font-weight{
+    font-weight: bolder;
+    font-size: 36rpx;
+}

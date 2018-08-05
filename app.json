@@ -1,7 +1,9 @@
 {
     "pages":[
+        "pages/ucenter/wallet/index/index",
+        "pages/ucenter/my-trips/details/index",
+        "pages/ucenter/my-trips/index/index",
         "pages/ucenter/call-center/index/index",
-        "pages/ucenter/wallet/index",
         "pages/ucenter/index/index"
     ],
     "window":{
