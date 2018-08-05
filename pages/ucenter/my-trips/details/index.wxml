@@ -1,0 +1,53 @@
+<!--index.wxml-->
+<view class="container">
+    <view class="trips-detail-wrap">
+        <view>
+            <text class="trip-title">订单详情</text>
+        </view>
+        <view>
+            <view class="trips-table">
+                <text class="table-tag">订单编号  :</text>
+                <text class="table-value">{{order_details.order_no}}</text>
+            </view>
+            <view class="trips-table">
+                <text class="table-tag">开始时间  :</text>
+                <text class="table-value">{{order_details.start_time}}</text>
+            </view>
+            <view class="trips-table">
+                <text class="table-tag">结束时间  :</text>
+                <text class="table-value">{{order_details.end_time}}</text>
+            </view>
+            <view class="trips-table">
+                <text class="table-tag">商场定位  :</text>
+                <text class="table-value">{{order_details.site}}</text>
+            </view>
+            <view class="trips-table">
+                <text class="table-tag">订单金额  :</text>
+                <text class="table-value">￥{{order_details.order_amount}}</text>
+            </view>
+            <view class="trips-table">
+                <text class="table-tag">订单状态  :</text>
+                <text class="table-value red-color" wx:if="{{order_details.order_status == '0'}}">已支付</text>
+                <text class="table-value red-color" wx:elif="{{order_details.order_status == '1'}}">待支付</text>
+                <text class="table-value red-color" wx:elif="{{order_details.order_status == '2'}}">违规订单</text>
+            </view>
+            <view class="trips-table">
+                <text class="table-tag">机器人名称  :</text>
+                <text class="table-value yellow-color font-weight">{{order_details.robot_name}}</text>
+            </view>
+        </view>
+        <view class="trips-tip">
+            <text class="trips-title2">状态描述</text>
+            <text class="trips-tip-text">
+                该订单尚未支付，请点击<text class="font-weight">“支付”</text>完成订单。存在未支付订单时，您将<text class="font-weight">无法进行下一次使用</text>，并且<text class="font-weight">无法退还押金</text>。
+            </text>
+        </view>
+        <view class="switch-account">
+            <image class="switchBtn" src="{{payBtn}}" background-size="cover"></image>
+        </view>
+
+    </view>
+
+
+
+</view>

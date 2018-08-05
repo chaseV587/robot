@@ -1,0 +1,65 @@
+/**index.wxss**/
+.container {
+    width: 100%;
+    padding: 0rpx 25rpx 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: #ffffff;
+}
+.trip-title{
+    width: 100%;
+    height: 140rpx;
+    line-height: 140rpx;
+    color: #333333;
+    font-size: 36rpx;
+}
+.trips-table{
+    width: 100%;
+    height: 70rpx;
+    line-height: 70rpx;
+    flex-direction: row;
+    display: inline-flex;
+}
+.table-tag{
+    flex: 2;
+    font-size: 30rpx;
+    font-weight: bolder;
+    width: 170rpx;
+}
+.table-value{
+    flex: 6;
+    font-size: 30rpx;
+}
+.trips-tip{
+    width: 100%;
+    margin-top: 60rpx;
+}
+.trips-title2{
+    font-weight: bolder;
+    color: #333333;
+    font-size: 30rpx;
+}
+.trips-tip-text{
+    font-size: 30rpx;
+    line-height: 60rpx;
+}
+
+.switchBtn{
+    margin: 60rpx 100rpx;
+    width: 500rpx;
+    height: 80rpx;
+}
+
+.done-color{
+    color: #999999;
+}
+.yellow-color{
+    color: #ffd100
+}
+.red-color{
+    color: #ff8181;
+}
+.font-weight{
+    font-weight: bolder;
+}
