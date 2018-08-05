@@ -1,0 +1,30 @@
+<!--index.wxml-->
+<view class="container">
+    <view class="trips-list-wrap">
+        <view wx:for="{{triplist}}" wx:key="item.time">
+            <view class="trip-wrap">
+                <view class="trip-detail1">
+                    <image class="trip-icon" src="{{item.pay_status == '0' ? time_icon1: time_icon2}}" background-size="cover"></image>
+                    <text class="trip-time {{item.pay_status == '0' ? 'done-color': ''}}">{{item.time}}</text>
+                    <!--<text class="trip-status {{item.pay_status == '0' ? 'done-color': ''}}">{{item.pay_status_text}}</text>-->
+                    <text class="trip-status done-color" wx:if="{{item.pay_status == '0'}}">已支付</text>
+                    <text class="trip-status yellow-color font-weight" wx:elif="{{item.pay_status == '1'}}">待支付</text>
+                    <text class="trip-status red-color font-weight" wx:elif="{{item.pay_status == '2'}}">违规订单</text>
+                </view>
+                <view class="trip-detail2">
+                    <text class="trip-text {{item.pay_status == '0' ? 'done-color': ''}}">
+                        {{item.robot_name}}陪伴了您<text class="trip-text-time">{{item.work_time}}</text>分钟
+                    </text>
+                    <text class="trip-amount {{item.pay_status == '0' ? 'done-color': ''}}">￥{{item.amount}}</text>
+                </view>
+                <view class="trip-detail3">
+                    <image class="trip-icon2" src="{{site_icon}}" background-size="cover"></image>
+                    <text class="trip-site">{{item.site}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+
+
+
+</view>
