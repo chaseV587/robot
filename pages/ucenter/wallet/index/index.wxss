@@ -241,6 +241,14 @@
     margin-top: 20rpx;
     margin-right: 40rpx;
 }
+.drawer-refund2{
+    height: 330rpx;
+}
+.refunIncon3{
+    width: 100rpx;
+    height: 100rpx;
+    margin: 130rpx auto 100rpx;
+}
 .done-color{
     color: #999999;
 }

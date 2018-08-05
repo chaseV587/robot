@@ -35,12 +35,15 @@ Page({
         showRechargeStatus: false, // 缴费弹窗状态
         showDepositStatus: false, // 交押金弹窗状态
         showRefundStatus: false, // 退押金弹窗
+        showRefundStatus2: false, // 退押金弹窗2（确定）
         switchBtn: '../../../../static/images/ucenter/icon-6.png',
         switchBtn2: '../../../../static/images/ucenter/icon-17.png',
         switchBtn3: '../../../../static/images/ucenter/icon-18.png',
         closeIcon: '../../../../static/images/ucenter/icon-7.png',
         refunIncon1: '../../../../static/images/ucenter/icon-19.png',
         refunIncon2: '../../../../static/images/ucenter/icon-20.png',
+        refunIncon3: '../../../../static/images/ucenter/icon-21.png',
+        refunIncon4: '../../../../static/images/ucenter/icon-22.png',
         creditList: [1,5,10,20],
         credit: 1, // 充值金额
         deposit_amount: 99, // 押金金额\
@@ -60,6 +63,10 @@ Page({
     refund: function (e) {
         var currentStatu = e.currentTarget.dataset.refund_status;
         this.util(currentStatu, 'refund')
+    },
+    refund_confirm: function(e) {
+        var currentStatu = e.currentTarget.dataset.refunded_status;
+        this.util(currentStatu, 'refunded')
     },
     util: function(currentStatu, type){
         /* 动画部分 */
@@ -104,6 +111,12 @@ Page({
                         showRefundStatus: false
                     }
                 );
+            } else if (currentStatu == "close" && type == 'refunded') {
+                this.setData(
+                    {
+                        showRefundStatus2: false
+                    }
+                );
             }
         }.bind(this), 200);
         // 显示
@@ -123,6 +136,13 @@ Page({
             this.setData(
                 {
                     showRefundStatus: true
+                }
+            );
+        } else if (currentStatu == "open" && type == 'refunded') {
+            this.setData(
+                {
+                    showRefundStatus: false,
+                    showRefundStatus2: true
                 }
             );
         }

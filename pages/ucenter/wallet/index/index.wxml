@@ -121,12 +121,37 @@
             </view>
 
             <view class="drawer-btn">
-                <image class="switchBtn" src="{{switchBtn3}}" background-size="cover" bindtap="refund" data-refund_status="close" ></image>
+                <image class="switchBtn" src="{{switchBtn3}}" background-size="cover" bindtap="refund_confirm" data-refunded_status="open" ></image>
             </view>
         </view>
 
         <view wx:if="{{showRefundStatus}}">
             <image class="drawer-close drawer-close-2" src="{{closeIcon}}" bindtap="refund" data-refund_status="close"  background-size="cover"></image>
+        </view>
+    </view>
+    <!--退押金弹窗2-->
+    <view class="drawer-wrap" wx:if="{{showRefundStatus2}}">
+        <!--mask-->
+        <view class="drawer-screen" bindtap="deposit" data-refunded_status="close" wx:if="{{showRefundStatus2}}"></view>
+        <!--使用animation属性指定需要执行的动画-->
+        <view animation="{{animationData}}" class="drawer-box" wx:if="{{showRefundStatus2}}">
+            <!--drawer content-->
+            <view class="drawer-amount drawer-refund2">
+                <image class="refunIncon3" src="{{refunIncon3}}" background-size="cover" bindtap="refund_confirm" data-refunded_status="close" ></image>
+            </view>
+            <view class="drawer-tip1">
+                <text class="yellow-color font-weight">{{deposit_amount}}</text> 元押金退款成功
+            </view>
+            <view class="drawer-tip2">
+                预计0-3个工作日原路返回支付账户
+            </view>
+            <view class="drawer-btn">
+                <image class="switchBtn" src="{{refunIncon4}}" background-size="cover" bindtap="refund_confirm" data-refunded_status="close" ></image>
+            </view>
+        </view>
+
+        <view wx:if="{{showRefundStatus2}}">
+            <image class="drawer-close" src="{{closeIcon}}" bindtap="refund_confirm" data-refunded_status="close"  background-size="cover"></image>
         </view>
     </view>
 
