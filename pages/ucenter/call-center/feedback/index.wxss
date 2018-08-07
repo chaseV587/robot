@@ -1,0 +1,70 @@
+/**index.wxss**/
+.container {
+    width: 700rpx;
+    margin: 20rpx 25rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.other-reason{
+    width: 650rpx;
+    height: 260rpx;
+    padding: 10rpx;
+    line-height: 60rpx;
+    border: 1px solid #999;
+    margin: 10rpx 75rpx;
+    font-size: 30rpx;
+    border-radius: 10rpx;
+}
+
+.site-data{
+    width: 650rpx;
+    height: 130rpx;
+    line-height: 130rpx;
+    font-size: 30rpx;
+    flex-direction: row;
+}
+.site-text{
+    float: left;
+}
+.site-icon{
+    float: left;
+    width: 30rpx;
+    height: 45rpx;
+    margin: 42rpx 0 0 40rpx ;
+}
+.camera-wrap{
+    width: 650rpx;
+    flex-direction: column;
+}
+.camera-title{
+    width: 100%;
+    font-size: 30rpx;
+    font-weight: bolder;
+}
+.camera-list{
+    width: 650rpx;
+    flex-direction: row;
+    margin-top: 100rpx;
+}
+.camera-icon{
+    width: 120rpx;
+    height: 120rpx;
+    margin-right: 20rpx;
+}
+
+.confirm-wrap{
+    width: 500rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    position: relative;
+    text-align: center;
+    margin-top: 170rpx;
+}
+.confirm-icon{
+    width: 500rpx;
+    height: 80rpx;
+    position: absolute;
+    top: 0;
+    left: 0;
+}

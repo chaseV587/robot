@@ -1,0 +1,28 @@
+<!--index.wxml-->
+<view class="container">
+    <view>
+        <textarea placeholder="请输入建议，您的建议是我们前进的动力。" class="other-reason" name="textarea"/>
+    </view>
+    <view>
+        <view class="site-data">
+            <text class="site-text">七宝宝龙城市广场</text>
+            <image class="site-icon" src="{{siteIcon}}" background-size="cover"></image>
+        </view>
+    </view>
+    <view class="camera-wrap">
+        <text class="camera-title">拍摄上传</text>
+        <view class="camera-list">
+            <image class="camera-icon" src="{{cameraIcon1}}" background-size="cover"></image>
+            <image class="camera-icon" src="{{cameraIcon2}}" background-size="cover"></image>
+            <image class="camera-icon" src="{{cameraIcon2}}" background-size="cover"></image>
+            <image class="camera-icon" src="{{cameraIcon2}}" background-size="cover"></image>
+        </view>
+    </view>
+    <view class="confirm-wrap">
+        <image class="confirm-icon" src="{{confirmIcon}}" background-size="cover"></image>
+        <text class="confirm-text">立  即  提  交</text>
+    </view>
+
+
+
+</view>
