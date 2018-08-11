@@ -53,6 +53,22 @@
     margin-right: 20rpx;
 }
 
+.camera-icon{
+    width: 120rpx;
+    height: 120rpx;
+    margin:19rpx;
+    float: left;
+    border: 1rpx solid #999999;
+    border-radius: 10rpx;
+}
+.del-camera-icon{
+    width: 36rpx;
+    height: 36rpx;
+    margin-left: -40rpx;
+    margin-top: 5rpx;
+    float: left;
+}
+
 .confirm-wrap{
     width: 500rpx;
     height: 80rpx;

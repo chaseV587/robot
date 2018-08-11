@@ -47,7 +47,6 @@
                 <image class="camera-icon" src="{{item}}" background-size="cover"></image>
                 <image class="del-camera-icon" src="{{delCameraImg}}" background-size="cover" data-index="{{index}}" catchtap="deleteImg"></image>
             </view>
-
             <image class="camera-icon" src="{{cameraIcon1}}" background-size="cover"  bindtap="chooseImg"></image>
         </view>
     </view>
