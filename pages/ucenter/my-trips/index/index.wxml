@@ -2,7 +2,7 @@
 <view class="container">
     <view class="trips-list-wrap">
         <view wx:for="{{triplist}}" wx:key="item.time">
-            <view class="trip-wrap">
+            <view class="trip-wrap" catchtap="jump">
                 <view class="trip-detail1">
                     <image class="trip-icon" src="{{item.pay_status == '0' ? time_icon1: time_icon2}}" background-size="cover"></image>
                     <text class="trip-time {{item.pay_status == '0' ? 'done-color': ''}}">{{item.time}}</text>

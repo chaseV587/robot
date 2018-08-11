@@ -11,7 +11,7 @@
     </view>
     <view class="menu-list">
         <view wx:for="{{menuList}}" wx:key="item.text" class="menu-item">
-            <navigator url="" >
+            <navigator url="{{item.url}}" >
                 <view class="menu-item-wrap">
                     <image class="menu-item-icon" src="{{item.icon}}" background-size="cover"></image>
                     <text class="menu-item-text">{{item.text}}</text>

@@ -14,17 +14,20 @@ Page({
             {
                 linkUrl: '',
                 icon: '../../../static/images/ucenter/icon-1.png',
-                text: '我的行程'
+                text: '我的行程',
+                url: '../my-trips/index/index'
             },
             {
                 linkUrl: '',
                 icon: '../../../static/images/ucenter/icon-2.png',
-                text: '我的钱包'
+                text: '我的钱包',
+                url: '../wallet/index/index'
             },
             {
                 linkUrl: '',
                 icon: '../../../static/images/ucenter/icon-3.png',
-                text: '客服中心'
+                text: '客服中心',
+                url: '../call-center/index/index'
             }
         ],
         switchBtn: '../../../static/images/ucenter/icon-4.png',

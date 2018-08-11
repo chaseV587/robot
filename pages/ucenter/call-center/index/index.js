@@ -88,6 +88,12 @@ Page({
         this.setData({
             credit: currentStatu
         });
+    },
+    jump: function(e) {
+        var url = e.currentTarget.dataset.jumpto;
+        wx.navigateTo({
+            url: url
+        })
     }
 
 });

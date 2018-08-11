@@ -35,5 +35,10 @@ Page({
         time_icon2: '../../../../static/images/ucenter/icon-14.png',
         site_icon: '../../../../static/images/ucenter/icon-15.png'
     },
+    jump: function (e) {
+        wx.navigateTo({
+            url: '../details/index'
+        })
+    }
 
 });
