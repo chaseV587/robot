@@ -1,5 +1,6 @@
 {
     "pages":[
+        "pages/ucenter/call-center/report/index",
         "pages/ucenter/call-center/feedback/index",
         "pages/ucenter/wallet/index/index",
         "pages/ucenter/my-trips/details/index",

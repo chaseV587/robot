@@ -1,0 +1,59 @@
+<!--index.wxml-->
+<view class="container">
+    <view class="robot-wrap">
+        <view class="top-wrap">
+            <image class="robotImg" src="{{robotImg}}" background-size="cover"></image>
+            <view class="fault-list">
+                <view class="fault-item fault-1 ">
+                    <image class="faultIcon1" src="{{checkedReason == '0' ? faultIcon2 : faultIcon1}}" background-size="cover"></image>
+                    <text class="fault-text {{checkedReason == '0' ? 'fault-active': ''}}">无法跟随</text>
+                </view>
+                <view class="fault-item fault-2">
+                    <image class="faultIcon1" src="{{checkedReason == '1' ? faultIcon2 : faultIcon1}}" background-size="cover"></image>
+                    <text class="fault-text {{checkedReason == '1' ? 'fault-active': ''}}">外壳磨损</text>
+                </view>
+                <view class="fault-item fault-3">
+                    <image class="faultIcon1" src="{{checkedReason == '2' ? faultIcon2 : faultIcon1}}" background-size="cover"></image>
+                    <text class="fault-text {{checkedReason == '2' ? 'fault-active': ''}}">储物柜损坏</text>
+                </view>
+                <view class="fault-item fault-4">
+                    <image class="faultIcon1" src="{{checkedReason == '3' ? faultIcon2 : faultIcon1}}" background-size="cover"></image>
+                    <text class="fault-text {{checkedReason == '3' ? 'fault-active': ''}}">车轮损坏</text>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <view class="reason-list">
+        <text class="reason-item {{checkedReason == '0' ? 'reason-active': ''}}" bindtap="checkReason" data-reason_tag="0">无法跟随</text>
+        <text class="reason-item {{checkedReason == '1' ? 'reason-active': ''}}" bindtap="checkReason" data-reason_tag="1">外壳磨损</text>
+        <text class="reason-item {{checkedReason == '2' ? 'reason-active': ''}}" bindtap="checkReason" data-reason_tag="2">储物柜损坏</text>
+        <text class="reason-item {{checkedReason == '3' ? 'reason-active': ''}}" bindtap="checkReason" data-reason_tag="3">车轮损坏</text>
+        <text class="reason-item {{checkedReason == '4' ? 'reason-active': ''}}" bindtap="checkReason" data-reason_tag="4">其他</text>
+    </view>
+
+    <view wx:if="{{checkedReason == '4'}}">
+        <textarea placeholder="请输入建议，您的建议是我们前进的动力。" class="other-reason" name="textarea"/>
+    </view>
+    <view>
+        <view class="site-data">
+            <text class="site-text">七宝宝龙城市广场</text>
+            <image class="site-icon" src="{{siteIcon}}" background-size="cover"></image>
+        </view>
+    </view>
+    <view class="camera-wrap">
+        <view class="camera-list">
+            <image class="camera-icon" src="{{cameraIcon1}}" background-size="cover"></image>
+            <image class="camera-icon" src="{{cameraIcon2}}" background-size="cover"></image>
+            <image class="camera-icon" src="{{cameraIcon2}}" background-size="cover"></image>
+            <image class="camera-icon" src="{{cameraIcon2}}" background-size="cover"></image>
+        </view>
+    </view>
+    <view class="confirm-wrap">
+        <image class="confirm-icon" src="{{confirmIcon}}" background-size="cover"></image>
+        <text class="confirm-text">立  即  提  交</text>
+    </view>
+
+
+
+</view>
