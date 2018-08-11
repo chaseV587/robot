@@ -1,0 +1,7 @@
+<!--index.wxml-->
+<view class="container">
+    <rich-text nodes="{{richtext}}" bindtap="tap"></rich-text>
+
+
+
+</view>
