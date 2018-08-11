@@ -123,7 +123,7 @@
 }
 .camera-wrap{
     width: 650rpx;
-    flex-direction: column;
+    flex-direction: row;
 }
 .camera-title{
     width: 100%;
@@ -134,10 +134,22 @@
     width: 650rpx;
     flex-direction: row;
 }
+.camera-img-wrap{
+}
 .camera-icon{
     width: 120rpx;
     height: 120rpx;
-    margin-right: 20rpx;
+    margin:19rpx;
+    float: left;
+    border: 1rpx solid #999999;
+    border-radius: 10rpx;
+}
+.del-camera-icon{
+    width: 36rpx;
+    height: 36rpx;
+    margin-left: -40rpx;
+    margin-top: 5rpx;
+    float: left;
 }
 
 .confirm-wrap{

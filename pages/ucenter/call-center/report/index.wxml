@@ -43,10 +43,12 @@
     </view>
     <view class="camera-wrap">
         <view class="camera-list">
-            <image class="camera-icon" src="{{cameraIcon1}}" background-size="cover"></image>
-            <image class="camera-icon" src="{{cameraIcon2}}" background-size="cover"></image>
-            <image class="camera-icon" src="{{cameraIcon2}}" background-size="cover"></image>
-            <image class="camera-icon" src="{{cameraIcon2}}" background-size="cover"></image>
+            <view class="camera-img-wrap" wx:for="{{cameraImgArr}}" wx:for-item="item" wx:key="*this">
+                <image class="camera-icon" src="{{item}}" background-size="cover"></image>
+                <image class="del-camera-icon" src="{{delCameraImg}}" background-size="cover" data-index="{{index}}" catchtap="deleteImg"></image>
+            </view>
+
+            <image class="camera-icon" src="{{cameraIcon1}}" background-size="cover"  bindtap="chooseImg"></image>
         </view>
     </view>
     <view class="confirm-wrap">
